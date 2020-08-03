@@ -1,0 +1,27 @@
+#to check whether the string is palindrome or not
+def ispalin(s):
+  return s==s[::-1]
+import itertools
+#to create all permutations
+def per(s):
+  l=[]
+  t=list(itertools.permutations(s,len(s))) 
+  for i in range(0,len(t)): 
+    if ispalin(''.join(t[i])):
+      l.append(''.join(t[i]))
+  k=[]
+  for i in l:
+    if i not in k:
+      k.append(i)
+  k.sort()
+  return k
+#to print the output
+def printing(k):
+  if len(k)==0:
+    print('Not a palindrome')
+  else:
+    for i in range(len(k)):
+      print(k[i])
+n=int(input())
+for j in range(n):
+  printing(per(input()))
