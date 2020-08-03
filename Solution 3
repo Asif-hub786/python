@@ -1,0 +1,7 @@
+n=list(range(10))
+k=len(n)
+for i in range(len(n)//2):
+  t=n[i]
+  n[i]=n[k+~i]
+  n[k+~i]=t
+print(n)
