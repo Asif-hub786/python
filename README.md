@@ -57,3 +57,7 @@ NITIN
 Explanation:
 
 There are only two palindromes that can be constructed from NITIN.
+
+
+
+3)Reverse an array without using -ve sign and inbulit reverse function
