@@ -1,4 +1,4 @@
-#to check whether the string is palindrome or not
+#to check whether the string is palindrome or not using itertools 
 def ispalin(s):
   return s==s[::-1]
 import itertools
@@ -25,3 +25,47 @@ def printing(k):
 n=int(input())
 for j in range(n):
   printing(per(input()))
+  
+  
+  
+  
+#without using itertools
+def toString(List): 
+    return ''.join(List) 
+def permute(a, l, r): 
+    if l==r: 
+        k.append(toString(a))
+    else: 
+        for i in range(l,r+1): 
+            a[l], a[i] = a[i], a[l] 
+            permute(a, l+1, r) 
+            a[l], a[i] = a[i], a[l]
+
+def ispalin(s):
+  return s==s[::-1]
+def palin(k):
+  m=[]
+  p=[]
+  for i in k:
+    if ispalin(i):
+      m.append(i)
+  for i in m:
+    if i not in p:
+      p.append(i)
+  return(p)
+def printing(p):
+  if len(p)==0:
+    print("Not a apalindrome")
+  else:
+    p.sort()
+    for i in p:
+      print(i)
+n=int(input())
+for o in range(n):
+  s=list(input())
+  n = len(s) 
+  k=[]
+  p=[]
+  permute(s, 0, n-1)
+  p=palin(k)
+  printing(p)
